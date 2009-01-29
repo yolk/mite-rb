@@ -1,0 +1,15 @@
+The official Ruby library for interacting with the "RESTful mite.api":http://mite.yo.lk/api.
+
+h3. Install
+   
+   sudo gem install mite-rb
+
+mite-rb requires activeresource and activesupport gems to be installed.
+
+h3. Documentation
+
+Take a look at lib/mite-rb.rb for examples and documentation.
+
+h3. Use the console to interact with the mite.api
+
+   irb -r lib/mite-rb/console
