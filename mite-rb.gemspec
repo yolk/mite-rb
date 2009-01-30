@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   
   s.authors = ["Sebastian Munz"]
   s.date = %q{2009-01-30}
-  s.description = "The official Ruby library for interacting with the RESTful mite.api."
+  s.description = "The official Ruby library for interacting with the RESTful API of mite, a sleek time tracking webapp."
   s.email = ["team@yo.lk"]
   s.extra_rdoc_files = ["LICENSE"]
   s.files = ["LICENSE", "README.textile", "lib/mite-rb.rb", "lib/mite-rb/console.rb"]

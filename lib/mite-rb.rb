@@ -2,7 +2,8 @@ require 'rubygems'
 require 'activesupport'
 require 'activeresource'
 
-# Ruby lib for working with the Mite API's XML interface.
+# The official Ruby library for interacting with the RESTful API of mite,
+# a sleek time tracking webapp.
 #  
 # The first thing you need to set is the account name.  This is the same
 # as the web address (subdomain) for your account.
@@ -21,8 +22,8 @@ require 'activeresource'
 #   # or, use your api key
 #   Mite.key = 'cdfeasdaabcdefgssaeabcdefg'
 # 
-# This library is a small wrapper around the REST interface.  You should read the docs at
-# http://mite.yo.lk/api.
+# You should read the complete mite.api documentation at 
+# http://mite.yo.lk/api
 #
 module Mite
   class Error < StandardError; end
