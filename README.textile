@@ -1,8 +1,10 @@
 The official ruby library for interacting with the "RESTful API":http://mite.yo.lk/en/api of "mite":http://mite.yo.lk/en, a sleek time tracking webapp.
 
 h3. Install
+
+As a ruby gem from github:
    
-   sudo gem install yolk-mite-rb
+   sudo gem install yolk-mite-rb -s http://gems.github.com
 
 mite-rb requires activeresource and activesupport gems to be installed.
 
