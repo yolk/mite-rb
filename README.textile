@@ -6,7 +6,7 @@ As a ruby gem from github:
    
    sudo gem install yolk-mite-rb -s http://gems.github.com
 
-mite-rb requires activeresource and activesupport gems to be installed.
+mite-rb requires activeresource and activesupport gems in a current version (2.3.2) to be installed.
 
 h3. Documentation
 

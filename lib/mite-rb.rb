@@ -22,8 +22,12 @@ module Mite
     end
 
     # Sets up basic authentication credentials for all resources.
-    def authenticate(email, password)
-      @email    = email
+    def authenticate(user, password)
+      resources.each do |klass|
+        klass.user = user
+        klass.password = password
+      end
+      @user     = user
       @password = password
       true
     end
@@ -42,7 +46,7 @@ module Mite
   end
   
   self.host_format   = '%s://%s%s'
-  self.domain_format = '%s.mite.yo.lk'
+  self.domain_format = '%s.test.yo.lk'
   self.protocol      = 'http'
   self.port          = ''
 
@@ -55,6 +59,7 @@ module Mite
           attr_accessor :site_format
         end
         base.site_format = '%s'
+        base.timeout = 20
         super
       end
       
@@ -91,18 +96,10 @@ module Mite
   class Error < StandardError; end
 end
 
-module ActiveResource
-  class Connection
-    private
-    def authorization_header
-      (Mite.email && Mite.password ? { 'Authorization' => 'Basic ' + ["#{Mite.email}:#{Mite.password}"].pack('m').delete("\r\n") } : {})
-    end
-  end
-end
-
 require 'mite/customer'
 require 'mite/project'
 require 'mite/service'
 require 'mite/time_entry'
 require 'mite/time_entry_group'
+require 'mite/tracker'
 require 'mite/user'
