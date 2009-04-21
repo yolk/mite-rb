@@ -2,27 +2,27 @@ The official ruby library for interacting with the "RESTful API":http://mite.yo.
 
 h3. Install
    
-   sudo gem install mite-rb
+   sudo gem install yolk-mite-rb
 
 mite-rb requires activeresource and activesupport gems to be installed.
 
 h3. Documentation
 
-The first thing you need to set is the account name.  This is the same as the web address (subdomain) for your account.
-  
-  # if you access mite under demo.mite.yo.lk
+The first thing you need to set is the account name.  This is the same as the web address (subdomain) for your account. For example if you use mite from the domain demo.mite.yo.lk:
+
   Mite.account = 'demo'
 
 Then, you should set the authentication. You can either use your login credentials (email and password) with HTTP Basic Authentication or your mite.api key. In both cases you must enable the mite.api in your user settings.
 
-  # with basic authentication
+With basic authentication:
+
   Mite.authenticate('rick@techno-weenie.net', 'spacemonkey')
 
-  # or, use your api key
+or, use your api key:
+
   Mite.key = 'cdfeasdaabcdefgssaeabcdefg'
 
-You should read the complete mite.api documentation at 
-http://mite.yo.lk/en/api
+You should read the complete mite.api documentation at http://mite.yo.lk/en/api
 
 h4. Project
 
