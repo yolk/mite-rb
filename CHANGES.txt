@@ -1,5 +1,5 @@
 = mite-rb Changelog
  
-== Version 0.0.1 :: In Progress...
+== Version 0.0.1
 
 * Initial Version
