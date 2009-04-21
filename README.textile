@@ -1,4 +1,4 @@
-The official Ruby library for interacting with the "RESTful API":http://mite.yo.lk/en/api of "mite":http://mite.yo.lk/en, a sleek time tracking webapp.
+The official ruby library for interacting with the "RESTful API":http://mite.yo.lk/en/api of "mite":http://mite.yo.lk/en, a sleek time tracking webapp.
 
 h3. Install
    

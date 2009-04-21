@@ -4,7 +4,7 @@ require 'rubygems'
 require 'activesupport'
 require 'activeresource'
 
-# The official Ruby library for interacting with the RESTful API of mite,
+# The official ruby library for interacting with the RESTful API of mite,
 # a sleek time tracking webapp.
 
 module Mite
