@@ -46,7 +46,7 @@ module Mite
   end
   
   self.host_format   = '%s://%s%s'
-  self.domain_format = '%s.test.yo.lk'
+  self.domain_format = '%s.mite.yo.lk'
   self.protocol      = 'http'
   self.port          = ''
 
