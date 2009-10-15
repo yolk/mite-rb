@@ -1,7 +1,7 @@
 class Mite::TimeEntry < Mite::Base
   
   def service
-    @service ||= Service.find(service_id) unless service_id.blank?
+    @service ||= Mite::Service.find(service_id) unless service_id.blank?
   end
   
   def service=(service)
@@ -10,7 +10,7 @@ class Mite::TimeEntry < Mite::Base
   end
   
   def project
-    @project ||= Project.find(project_id) unless project_id.blank?
+    @project ||= Mite::Project.find(project_id) unless project_id.blank?
   end
   
   def project=(project)
@@ -48,7 +48,7 @@ class Mite::TimeEntry < Mite::Base
   class << self
     def find_every(options={})
       return super(options) if !options[:params] || !options[:params][:group_by]
-      TimeEntryGroup.all(options)
+      Mite::TimeEntryGroup.all(options)
     end
   end
 end

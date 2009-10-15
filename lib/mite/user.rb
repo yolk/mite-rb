@@ -1,7 +1,7 @@
 class Mite::User < Mite::Base
   
   def time_entries(options = {})
-    TimeEntry.find(:all, :params => options.update(:user_id => id))
+    Mite::TimeEntry.find(:all, :params => options.update(:user_id => id))
   end
   
   def save

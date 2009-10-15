@@ -5,7 +5,7 @@ class Mite::TimeEntryGroup < Mite::Base
   
   class << self
     def find_every(options={})
-      return TimeEntry.all(options) if !options[:params] || !options[:params][:group_by]
+      return Mite::TimeEntry.all(options) if !options[:params] || !options[:params][:group_by]
       
       returning super(options) do |records|
         records.each do |record| 
@@ -31,6 +31,6 @@ class Mite::TimeEntryGroup < Mite::Base
     
     return [] if empty_result
     
-    TimeEntry.all(options)
+    Mite::TimeEntry.all(options)
   end
 end
