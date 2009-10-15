@@ -2,9 +2,9 @@ The official ruby library for interacting with the "RESTful API":http://mite.yo.
 
 h3. Install
 
-As a ruby gem from github:
+As a ruby gem from gemcutter:
    
-   sudo gem install yolk-mite-rb -s http://gems.github.com
+   sudo gem install mite-rb -s http://gemcutter.org
 
 mite-rb requires activeresource and activesupport gems in a current version (2.3.2) to be installed.
 
