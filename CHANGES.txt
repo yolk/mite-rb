@@ -1,5 +1,17 @@
 = mite-rb Changelog
 
+== Version 0.2.0 (not completed)
+
+* Added singleton resources account and myself (current authenticated user)
+
+== Version 0.1.0
+
+* Use absolute classes to prevent collision with other classes
+
+== Version 0.0.3
+
+* Fixed wrong domain_name (old one for testung removed)
+
 == Version 0.0.2
 
 * Added tracker-resource and methods on time_entry
