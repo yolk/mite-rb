@@ -93,22 +93,7 @@ module Mite
       def last(options={})
         find_every(options).last
       end
-      
-      # Undo destroy action on the resource with the ID in the +id+ parameter.
-      def undo_destroy(id)
-        returning(self.new(:id => id)) { |res| res.undo_destroy }
-      end
     end
-    
-    # Undo destroy action.
-    def undo_destroy
-      path = element_path(prefix_options).sub(/\.([\w]+)/, '/undo_delete.\1')
-      
-      returning connection.post(path, "", self.class.headers) do |response|
-        load_attributes_from_response(response)
-      end
-    end
-  
   end
   
   class SingletonBase < Base
@@ -133,13 +118,11 @@ module Mite
     def find
       super(1)
     end
-
-    def first
-      find
-    end
+    
+    alias_method :first, :find
+    alias_method :last, :find
 
     # Prevent collection methods
-
     def all
       raise MethodNotAvaible, "Method not supported on #{self.class.name}"
     end

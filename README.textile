@@ -61,10 +61,5 @@ Deleting a project
 
    project = Mite::Project.find(1209)
    project.destroy
- 
-Restore a destroyed project
-(will only work for aprox. 12 hours after the object was destroyed)
-
-   project = Mite::Project.undo_destroy(1209)
 
 
