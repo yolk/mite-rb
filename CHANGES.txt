@@ -1,5 +1,9 @@
 = mite-rb Changelog
 
+== In progress
+
+* Added Project#name_with_customer for best practice/convenience
+
 == Version 0.2.1
 
 * Added archived and active collection-methods to Customer, Project, Service and User
