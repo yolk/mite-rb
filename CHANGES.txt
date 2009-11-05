@@ -3,6 +3,7 @@
 == Version 0.2.0 (not completed)
 
 * Added singleton resources account and myself (current authenticated user)
+* Removed depreciated undo method
 
 == Version 0.1.0
 
