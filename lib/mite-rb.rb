@@ -40,6 +40,18 @@ module Mite
     def resources
       @resources ||= []
     end
+  
+    # Validates connection
+    # returns true when valid false when not
+    def validate
+      validate! rescue false
+    end
+    
+    # Same as validate_connection 
+    # but raises http-error when connection is invalid
+    def validate!
+      !!Mite::Account.find
+    end
   end
   
   self.host_format   = '%s://%s%s'

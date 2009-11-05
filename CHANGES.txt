@@ -5,6 +5,7 @@
 * Added singleton resources account and myself (current authenticated user)
 * Removed depreciated undo method
 * Do not require rubygems
+* Added Method to validate the connection to mite
 
 == Version 0.1.0
 

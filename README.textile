@@ -10,6 +10,10 @@ mite-rb requires activeresource and activesupport gems in a current version (2.3
 
 h3. Documentation
 
+You should read the complete mite.api documentation at http://mite.yo.lk/en/api
+
+h4. Authenticate
+
 The first thing you need to set is the account name.  This is the same as the web address (subdomain) for your account. For example if you use mite from the domain demo.mite.yo.lk:
 
    Mite.account = 'demo'
@@ -24,7 +28,19 @@ or, use your api key:
 
    Mite.key = 'cdfeasdaabcdefgssaeabcdefg'
 
-You should read the complete mite.api documentation at http://mite.yo.lk/en/api
+h4. Validate connection
+
+You can validate the connection/authentication with
+
+  Mite.validate
+  
+This will return true when the connection is valid and false if not.
+
+Use
+
+  Mite.validate!
+  
+and mite-rb will raise an exception with further details when the connection is not valid.
 
 h4. Project
 
