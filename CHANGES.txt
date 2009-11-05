@@ -4,6 +4,7 @@
 
 * Added singleton resources account and myself (current authenticated user)
 * Removed depreciated undo method
+* Do not require rubygems
 
 == Version 0.1.0
 

@@ -1,6 +1,3 @@
-$:.unshift(File.dirname(__FILE__))
-
-require 'rubygems'
 require 'activesupport'
 require 'activeresource'
 
@@ -130,7 +127,7 @@ module Mite
   
 end
 
-
+$:.unshift(File.dirname(__FILE__))
 
 require 'mite/customer'
 require 'mite/project'
