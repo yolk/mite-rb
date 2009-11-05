@@ -49,10 +49,23 @@ and mite-rb will raise an exception with further details when the connection is 
 #### Find all active projects
 
     Mite::Project.all
+    
+#### Find all archived projects
+
+    Mite::Project.archived
+    
+#### Find projects where name contains 'web'
+
+    Mite::Project.all(:params => {:name => 'web'})
    
 #### Find single project by ID
 
     Mite::Project.find(1209)
+    
+#### Get all time entries of a project
+
+    project = Mite::Project.find(1209)
+    project.time_entries
     
 #### Get the customer of a project
 

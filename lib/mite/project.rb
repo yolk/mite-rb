@@ -1,5 +1,7 @@
 class Mite::Project < Mite::Base
   
+  include Mite::ResourceWithActiveArchived
+  
   def time_entries(options = {})
     Mite::TimeEntry.find(:all, :params => options.update(:project_id => id))
   end

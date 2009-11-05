@@ -1,6 +1,10 @@
 = mite-rb Changelog
 
-== Version 0.2.0 (not completed)
+== Version 0.2.1
+
+* Added archived and active collection-methods to Customer, Project, Service and User
+
+== Version 0.2.0
 
 * Added singleton resources account and myself (current authenticated user)
 * Removed depreciated undo method

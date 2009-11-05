@@ -61,7 +61,7 @@ module Mite
   
   class MethodNotAvaible < StandardError; end
   
-  module NoWriteAccess
+  module ResourceWithoutWriteAccess
     def save
       raise MethodNotAvaible, "Cannot save #{self.class.name} over mite.api"
     end
@@ -72,6 +72,22 @@ module Mite
 
     def destroy
       raise MethodNotAvaible, "Cannot save #{self.class.name} over mite.api"
+    end
+  end
+  
+  module ResourceWithActiveArchived
+    def self.included(base)
+      base.extend(ClassMethods)
+    end
+    
+    module ClassMethods
+      def archived(options={})
+        find(:all, options.update(:from => :archived))
+      end
+      
+      def active(options={})
+        find(:all, options)
+      end
     end
   end
   
@@ -92,7 +108,7 @@ module Mite
       
       # Common shortcuts known from ActiveRecord
       def all(options={})
-        find_every(options)
+        find(:all, options)
       end
 
       def first(options={})
@@ -106,7 +122,7 @@ module Mite
   end
   
   class SingletonBase < Base
-    include NoWriteAccess
+    include ResourceWithoutWriteAccess
     
     class << self
       def collection_name
