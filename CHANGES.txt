@@ -17,7 +17,7 @@
 
 == Version 0.0.3
 
-* Fixed wrong domain_name (old one for testung removed)
+* Fixed wrong domain name (old one for testing removed)
 
 == Version 0.0.2
 
