@@ -49,17 +49,35 @@ module Mite
   self.domain_format = '%s.mite.yo.lk'
   self.protocol      = 'http'
   self.port          = ''
+  
+  class MethodNotAvaible < StandardError; end
+  
+  module NoWriteAccess
+    def save
+      raise MethodNotAvaible, "Cannot save #{self.class.name} over mite.api"
+    end
 
+    def create
+      raise MethodNotAvaible, "Cannot save #{self.class.name} over mite.api"
+    end
+
+    def destroy
+      raise MethodNotAvaible, "Cannot save #{self.class.name} over mite.api"
+    end
+  end
+  
   class Base < ActiveResource::Base
     class << self
       
       def inherited(base)
-        Mite.resources << base
-        class << base
-          attr_accessor :site_format
+        unless base == Mite::SingletonBase
+          Mite.resources << base
+          class << base
+            attr_accessor :site_format
+          end
+          base.site_format = '%s'
+          base.timeout = 20
         end
-        base.site_format = '%s'
-        base.timeout = 20
         super
       end
       
@@ -93,8 +111,43 @@ module Mite
   
   end
   
-  class Error < StandardError; end
+  class SingletonBase < Base
+    include NoWriteAccess
+    
+    class << self
+      def collection_name
+        element_name
+      end
+
+      def element_path(id, prefix_options = {}, query_options = nil)
+        prefix_options, query_options = split_options(prefix_options) if query_options.nil?
+        "#{prefix(prefix_options)}#{collection_name}.#{format.extension}#{query_string(query_options)}"
+      end
+
+      def collection_path(prefix_options = {}, query_options = nil) 
+        prefix_options, query_options = split_options(prefix_options) if query_options.nil? 
+        "#{prefix(prefix_options)}#{collection_name}.#{format.extension}#{query_string(query_options)}" 
+      end
+    end
+    
+    def find
+      super(1)
+    end
+
+    def first
+      find
+    end
+
+    # Prevent collection methods
+
+    def all
+      raise MethodNotAvaible, "Method not supported on #{self.class.name}"
+    end
+  end
+  
 end
+
+
 
 require 'mite/customer'
 require 'mite/project'
@@ -103,3 +156,5 @@ require 'mite/time_entry'
 require 'mite/time_entry_group'
 require 'mite/tracker'
 require 'mite/user'
+require 'mite/myself'
+require 'mite/account'
