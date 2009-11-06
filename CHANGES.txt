@@ -1,6 +1,6 @@
 = mite-rb Changelog
 
-== In progress
+== Version 0.2.2
 
 * Added Project#name_with_customer for best practice/convenience
 
