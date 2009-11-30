@@ -1,5 +1,9 @@
 = mite-rb Changelog
 
+== Version 0.2.3
+
+* Fixed bug when using Project#name_with_customer on project without customer.
+
 == Version 0.2.2
 
 * Added Project#name_with_customer for best practice/convenience

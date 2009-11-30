@@ -7,7 +7,7 @@ class Mite::Project < Mite::Base
   end
   
   def name_with_customer
-    customer_name.blank? ? name : "#{name} (#{customer_name})"
+    respond_to?(:customer_name) && !customer_name.blank? ? "#{name} (#{customer_name})" : name
   end
   
   def customer
