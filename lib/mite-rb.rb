@@ -119,6 +119,12 @@ module Mite
         find_every(options).last
       end
     end
+  
+    private
+    
+    def query_string2(options)
+      options.is_a?(String) ? "?#{options}" : super
+    end
   end
   
   class SingletonBase < Base

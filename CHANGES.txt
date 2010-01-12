@@ -1,5 +1,10 @@
 = mite-rb Changelog
 
+== Version 0.2.4
+
+* Added new resource Mite::TimeEntry::Bookmark (read only)
+* Some cleanup.
+
 == Version 0.2.3
 
 * Fixed bug when using Project#name_with_customer on project without customer.
