@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{mite-rb}
-  s.version = "0.2.3"
+  s.version = "0.2.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Sebastian Munz"]
-  s.date = %q{2009-11-30}
+  s.date = %q{2010-01-13}
   s.description = %q{The official ruby library for interacting with the RESTful mite.api.}
   s.email = %q{sebastian@yo.lk}
   s.extra_rdoc_files = [
@@ -30,6 +30,7 @@ Gem::Specification.new do |s|
      "lib/mite/project.rb",
      "lib/mite/service.rb",
      "lib/mite/time_entry.rb",
+     "lib/mite/time_entry/bookmark.rb",
      "lib/mite/time_entry_group.rb",
      "lib/mite/tracker.rb",
      "lib/mite/user.rb",
