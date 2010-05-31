@@ -32,13 +32,13 @@ or
 
 ### User-Agent
 
-mite-rb sets the User-Agent HTTP-header to 'mite-rb/0.2.5' by default. You can (and should) customize it to a more specific one:
+mite-rb sets the User-Agent HTTP-header to 'mite-rb/0.3.0' by default. You can (and should) customize it to a more specific one:
 
-    Mite.user_agent = 'my-funky-mite-addon/1.2.3'
+    Mite.user_agent = 'my-mighty-mite-addon/1.2.3'
 
 You can combine your custom string with the default one:
 
-    Mite.user_agent = "my-funky-mite-addon/1.2.3;#{Mite.user_agent}"
+    Mite.user_agent = "my-mighty-mite-addon/1.2.3;#{Mite.user_agent}"
 
 ### Validate connection
 
