@@ -1,5 +1,9 @@
 = mite-rb Changelog
 
+== Version 0.3.0
+
+* Added User-Agent
+
 == Version 0.2.4
 
 * Added new resource Mite::TimeEntry::Bookmark (read only)
