@@ -1,5 +1,6 @@
 require 'active_support'
 require 'active_resource'
+require 'yaml'
 
 # The official ruby library for interacting with the RESTful API of mite,
 # a sleek time tracking webapp.
@@ -7,7 +8,7 @@ require 'active_resource'
 module Mite
   
   class << self
-    attr_accessor :email, :password, :host_format, :domain_format, :protocol, :port
+    attr_accessor :email, :password, :host_format, :domain_format, :protocol, :port, :user_agent
     attr_reader :account, :key
 
     # Sets the account name, and updates all resources with the new domain.
@@ -36,6 +37,14 @@ module Mite
       end
       @key = value
     end
+    
+    # Sets the mite.user_agent for all resources.
+    def user_agent=(user_agent)
+      resources.each do |klass|
+        klass.headers['User-Agent'] = user_agent
+      end
+      @user_agent = user_agent
+    end
 
     def resources
       @resources ||= []
@@ -52,12 +61,22 @@ module Mite
     def validate!
       !!Mite::Account.find
     end
+  
+    def version
+      @version ||= begin
+        config = YAML.load(File.read(File.join(File.dirname(__FILE__), "..", "VERSION.yml")))
+        "#{config[:major]}.#{config[:minor]}.#{config[:patch]}"
+      rescue
+        "0.0.0"
+      end
+    end
   end
   
   self.host_format   = '%s://%s%s'
   self.domain_format = '%s.mite.yo.lk'
   self.protocol      = 'http'
   self.port          = ''
+  self.user_agent    = "mite-rb/#{Mite.version}"
   
   class MethodNotAvaible < StandardError; end
   
@@ -100,6 +119,7 @@ module Mite
           class << base
             attr_accessor :site_format
           end
+          base.headers['User-Agent'] = Mite.user_agent
           base.site_format = '%s'
           base.timeout = 20
         end
