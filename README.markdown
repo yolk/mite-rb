@@ -22,7 +22,7 @@ The first thing you need to set is the account name.  This is the same as the we
 
     Mite.account = 'demo'
 
-Then, you should set the authentication. You can either use your mite.api key (recommanded) or your login credentials (email and password).
+Then, you should set the authentication. You can either use your mite.api key (recommended) or your login credentials (email and password).
     
     Mite.key = 'cdfeasdaabcdefgssaeabcdefg'
     
