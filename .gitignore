@@ -3,3 +3,5 @@ pkg
 doc
 .DS_Store
 debug.rb
+Gemfile.lock
+.rvmrc

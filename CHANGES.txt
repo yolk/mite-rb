@@ -1,6 +1,7 @@
 = mite-rb Changelog
 
 * Default to https
+* Removed jeweler release dependency; now using bundler
 
 == Version 0.3.0
 
