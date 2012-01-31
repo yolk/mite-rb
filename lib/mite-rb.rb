@@ -74,7 +74,7 @@ module Mite
   
   self.host_format   = '%s://%s%s'
   self.domain_format = '%s.mite.yo.lk'
-  self.protocol      = 'http'
+  self.protocol      = 'https'
   self.port          = ''
   self.user_agent    = "mite-rb/#{Mite.version}"
   

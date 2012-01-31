@@ -1,5 +1,7 @@
 = mite-rb Changelog
 
+* Default to https
+
 == Version 0.3.0
 
 * Added User-Agent
