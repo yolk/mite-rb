@@ -1,50 +1,53 @@
-= mite-rb Changelog
+## mite-rb Changelog
+
+### development
 
 * Default to https
 * Removed jeweler release dependency; now using bundler
+* Depends now on activeresource >= 2.3.14; fixed issue with Ruby 1.9
 
-== Version 0.3.0
+### Version 0.3.0
 
 * Added User-Agent
 
-== Version 0.2.4
+### Version 0.2.4
 
 * Added new resource Mite::TimeEntry::Bookmark (read only)
 * Some cleanup.
 
-== Version 0.2.3
+### Version 0.2.3
 
 * Fixed bug when using Project#name_with_customer on project without customer.
 
-== Version 0.2.2
+### Version 0.2.2
 
 * Added Project#name_with_customer for best practice/convenience
 
-== Version 0.2.1
+### Version 0.2.1
 
 * Added archived and active collection-methods to Customer, Project, Service and User
 
-== Version 0.2.0
+### Version 0.2.0
 
 * Added singleton resources account and myself (current authenticated user)
 * Removed depreciated undo method
 * Do not require rubygems
 * Added Method to validate the connection to mite
 
-== Version 0.1.0
+### Version 0.1.0
 
 * Use absolute classes to prevent collision with other classes
 
-== Version 0.0.3
+### Version 0.0.3
 
 * Fixed wrong domain name (old one for testing removed)
 
-== Version 0.0.2
+### Version 0.0.2
 
 * Added tracker-resource and methods on time_entry
 * Fixed tiny datetimebug
 * Dependency of activeresource 2.3.2 and activesupport 2.3.2
  
-== Version 0.0.1
+### Version 0.0.1
 
 * Initial Version

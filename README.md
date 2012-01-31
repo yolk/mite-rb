@@ -4,11 +4,11 @@ The official ruby library for interacting with the [RESTful API](http://mite.yo.
 
 ## Install
 
-Install the lib as a ruby gem from gemcutter:
+Install the lib as a ruby gem:
    
-    sudo gem install mite-rb -s http://gemcutter.org
+    gem install mite-rb
 
-mite-rb requires activeresource and activesupport in version 2.3.2 or above.
+mite-rb requires activeresource and activesupport in version 2.3.14 or above.
 
 ## Documentation
 
