@@ -1,6 +1,5 @@
 require 'active_support'
 require 'active_resource'
-require 'yaml'
 
 # The official ruby library for interacting with the RESTful API of mite,
 # a sleek time tracking webapp.
@@ -63,12 +62,7 @@ module Mite
     end
   
     def version
-      @version ||= begin
-        config = YAML.load(File.read(File.join(File.dirname(__FILE__), "..", "VERSION.yml")))
-        "#{config[:major]}.#{config[:minor]}.#{config[:patch]}"
-      rescue
-        "0.0.0"
-      end
+      Mite::VERSION
     end
   end
   
@@ -76,7 +70,7 @@ module Mite
   self.domain_format = '%s.mite.yo.lk'
   self.protocol      = 'https'
   self.port          = ''
-  self.user_agent    = "mite-rb/#{Mite.version}"
+  self.user_agent    = "mite-rb/#{Mite::VERSION}"
   
   class MethodNotAvaible < StandardError; end
   

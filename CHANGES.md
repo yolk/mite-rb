@@ -1,6 +1,10 @@
 ## mite-rb Changelog
 
-### 0.4.0 / 2012-12-31
+### 0.4.1 / 2012-02-01
+
+* Fixed Mite.version
+
+### 0.4.0 / 2012-01-31
 
 * Default to https
 * Removed jeweler release dependency; now using bundler
