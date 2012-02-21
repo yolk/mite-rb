@@ -1,5 +1,9 @@
 ## mite-rb Changelog
 
+### 0.4.2 / 2012-02-22
+
+* Fixed require issue with Mite::VERSION
+
 ### 0.4.1 / 2012-02-01
 
 * Fixed Mite.version
