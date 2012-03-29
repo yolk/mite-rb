@@ -8,13 +8,13 @@ require 'mite/version.rb'
 module Mite
   
   class << self
-    attr_accessor :email, :password, :host_format, :domain_format, :protocol, :port, :user_agent
-    attr_reader :account, :key
+    attr_accessor :email, :password, :host_format, :domain_format, :port, :user_agent
+    attr_reader :account, :key, :protocol
 
     # Sets the account name, and updates all resources with the new domain.
     def account=(name)
       resources.each do |klass|
-        klass.site = klass.site_format % (host_format % [protocol, domain_format % name, ":#{port}"])
+        klass.site = klass.site_format % (host_format % ['https', domain_format % name, ":#{port}"])
       end
       @account = name
     end
@@ -45,6 +45,10 @@ module Mite
       end
       @user_agent = user_agent
     end
+    
+    def protocol=(protocol)
+      $stderr.puts "WARNING: mite.api can only be accessed over HTTPS." unless protocol == 'https'
+    end
 
     def resources
       @resources ||= []
@@ -69,7 +73,6 @@ module Mite
   
   self.host_format   = '%s://%s%s'
   self.domain_format = '%s.mite.yo.lk'
-  self.protocol      = 'https'
   self.port          = ''
   self.user_agent    = "mite-rb/#{Mite::VERSION}"
   
