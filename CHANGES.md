@@ -1,5 +1,9 @@
 ## mite-rb Changelog
 
+### 0.4.3 / 2012-03-29
+
+* The mite.api can only be accessed over HTTPS from now on
+
 ### 0.4.2 / 2012-02-22
 
 * Fixed require issue with Mite::VERSION
