@@ -8,8 +8,8 @@ require 'mite/version.rb'
 module Mite
   
   class << self
-    attr_accessor :email, :password, :host_format, :domain_format, :port, :user_agent
-    attr_reader :account, :key, :protocol
+    attr_accessor :email, :password, :host_format, :domain_format, :port
+    attr_reader :account, :key, :protocol, :user_agent
 
     # Sets the account name, and updates all resources with the new domain.
     def account=(name)
