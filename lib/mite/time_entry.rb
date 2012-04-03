@@ -53,4 +53,4 @@ class Mite::TimeEntry < Mite::Base
   end
 end
 
-Dir[File.join(File.dirname(__FILE__), "time_entry/*.rb")].each { |f| require f }
+require 'mite/time_entry/bookmark'

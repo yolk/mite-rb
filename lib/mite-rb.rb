@@ -179,5 +179,12 @@ module Mite
   
 end
 
-$:.unshift(File.dirname(__FILE__))
-Dir[File.join(File.dirname(__FILE__), "mite/*.rb")].each { |f| require f }
+require 'mite/account'
+require 'mite/customer'
+require 'mite/myself'
+require 'mite/project'
+require 'mite/service'
+require 'mite/time_entry'
+require 'mite/time_entry_group'
+require 'mite/tracker'
+require 'mite/user'
