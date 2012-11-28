@@ -1,5 +1,9 @@
 ## mite-rb Changelog
 
+### 0.4.5 / 2012-11-28
+
+* Fixed support for activesupport > 3.0.9 [#4]
+
 ### 0.4.4 / 2012-04-03
 
 * Fixed some ruby warnings
