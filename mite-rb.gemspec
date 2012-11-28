@@ -20,5 +20,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_runtime_dependency(%q<activeresource>, [">= 2.3.14"])
+  s.add_runtime_dependency(%q<activesupport>, ["<= 3.0.9"])
+
 end
 
