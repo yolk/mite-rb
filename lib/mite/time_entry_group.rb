@@ -7,11 +7,9 @@ class Mite::TimeEntryGroup < Mite::Base
     def find_every(options={})
       return Mite::TimeEntry.all(options) if !options[:params] || !options[:params][:group_by]
       
-      returning super(options) do |records|
-        records.each do |record| 
-          if record.attributes["time_entries_params"]
-            record.time_entries_params = record.attributes.delete("time_entries_params").attributes.stringify_keys
-          end
+      super(options).each do |record|
+        if record.attributes["time_entries_params"]
+          record.time_entries_params = record.attributes.delete("time_entries_params").attributes.stringify_keys
         end
       end
     end
