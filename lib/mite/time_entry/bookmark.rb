@@ -1,12 +1,12 @@
 class Mite::TimeEntry::Bookmark < Mite::Base
-  
+
   include Mite::ResourceWithoutWriteAccess
   self.prefix = "/time_entries/"
-  
+
   def team?
     user_id.blank?
   end
-  
+
   def params
     hash = CGI.parse(query)
     hash.each do |k, v|
@@ -14,11 +14,11 @@ class Mite::TimeEntry::Bookmark < Mite::Base
     end
     hash
   end
-  
+
   def follow
     Mite::TimeEntry.all(:params => params)
   end
-  
+
   class << self
     def follow(id)
       get("#{id}/follow")
