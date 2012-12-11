@@ -3,13 +3,13 @@ class Mite::Tracker < Mite::Base
   self.collection_name = "tracker"
 
   def self.current
-    tracking_time_entry = connection.get(collection_path, headers)["tracking_time_entry"]
+    tracking_time_entry = (format.decode(connection.get(collection_path, headers).body) || {})["tracking_time_entry"]
     tracking_time_entry ? instantiate_record(tracking_time_entry) : nil
   end
 
   def self.start(time_entry_or_id)
     id = time_entry_or_id.is_a?(Mite::TimeEntry) ? time_entry_or_id.id : time_entry_or_id
-    self.new(:id => id).start
+    new({:id => id}, true).start
   end
 
   def self.stop
