@@ -5,3 +5,4 @@ doc
 debug.rb
 Gemfile.lock
 .rvmrc
+.rbenv-*
