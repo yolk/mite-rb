@@ -1,5 +1,10 @@
 ## mite-rb Changelog
 
+### 0.5.0 / 2012-12-11
+
+* Fixed Mite::Tracker for activeresource >= 3.1.0 [#9]
+* From now on only support activeresource >= 3.1.0
+
 ### 0.4.5 / 2012-11-28
 
 * Fixed support for activesupport > 3.0.9 [#4]

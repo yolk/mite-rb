@@ -8,7 +8,7 @@ Install the lib as a ruby gem:
 
     gem install mite-rb
 
-mite-rb requires activeresource and activesupport in version 2.3.14 or above.
+mite-rb requires activeresource and activesupport in version 3.1 or above. If you want/need to use it with activeresource 2.3.14 to 3.0.9 please use mite-rb 0.4.5.
 
 ## Documentation
 
