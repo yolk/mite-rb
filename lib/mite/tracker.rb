@@ -24,7 +24,7 @@ class Mite::Tracker < Mite::Base
   end
 
   def stop
-    connection.delete(element_path, self.class.headers).is_a?(Net::HTTPSuccess) ? self : false
+    Net::HTTPSuccess === connection.delete(element_path, self.class.headers) && self
   end
 
   def time_entry
