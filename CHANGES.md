@@ -1,5 +1,9 @@
 ## mite-rb Changelog
 
+### 0.5.1 / 2013-01-14
+
+* Fixed issue with activeresource 3.2 when creating time entry
+
 ### 0.5.0 / 2012-12-11
 
 * Fixed Mite::Tracker for activeresource >= 3.1.0 [#5]
