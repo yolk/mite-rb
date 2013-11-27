@@ -1,5 +1,7 @@
 ## mite-rb Changelog
 
+### 0.5.2 / 2013-11-27
+
 * Fixed issue with activeresource 4: always include json root
 * Removed not needed method from Base class
 
