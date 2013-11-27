@@ -1,5 +1,7 @@
 ## mite-rb Changelog
 
+* Fixed issue with activeresource 4: always include json root
+
 ### 0.5.1 / 2013-01-14
 
 * Fixed issue with activeresource 3.2 when creating time entry

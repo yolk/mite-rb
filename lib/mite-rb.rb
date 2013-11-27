@@ -143,6 +143,10 @@ module Mite
     def query_string2(options)
       options.is_a?(String) ? "?#{options}" : super
     end
+
+    def include_root_in_json
+      true
+    end
   end
 
   class SingletonBase < Base
