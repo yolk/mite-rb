@@ -1,5 +1,7 @@
 ## mite-rb Changelog
 
+* Fixed issue with error format returned from mite
+
 ### 0.5.2 / 2013-11-27
 
 * Fixed issue with activeresource 4: always include json root

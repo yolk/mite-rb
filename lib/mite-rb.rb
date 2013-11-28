@@ -1,6 +1,7 @@
 require 'active_support'
 require 'active_resource'
-require 'mite/version.rb'
+require 'mite/activeresource_patch'
+require 'mite/version'
 
 # The official ruby library for interacting with the RESTful API of mite,
 # a sleek time tracking webapp.
