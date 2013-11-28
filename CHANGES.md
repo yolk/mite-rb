@@ -1,5 +1,7 @@
 ## mite-rb Changelog
 
+### 0.5.3 / 2013-11-28
+
 * Fixed issue with error format returned from mite
 
 ### 0.5.2 / 2013-11-27
