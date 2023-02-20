@@ -6,8 +6,8 @@ Gem::Specification.new do |s|
   s.name        = "mite-rb"
   s.version     = Mite::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Sebastian Munz"]
-  s.email       = ["sebastian@yo.lk"]
+  s.authors     = ["mite GmbH"]
+  s.email       = []
   s.homepage    = "https://github.com/yolk/mite-rb"
   s.summary     = %q{The official ruby library for interacting with the RESTful mite.api.}
   s.description = %q{The official ruby library for interacting with the RESTful mite.api.}

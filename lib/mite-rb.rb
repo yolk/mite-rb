@@ -73,7 +73,7 @@ module Mite
   end
 
   self.host_format   = '%s://%s%s'
-  self.domain_format = '%s.mite.yo.lk'
+  self.domain_format = '%s.mite.de'
   self.port          = ''
   self.user_agent    = "mite-rb/#{Mite::VERSION}"
 

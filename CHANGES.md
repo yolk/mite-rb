@@ -1,5 +1,9 @@
 ## mite-rb Changelog
 
+### 0.5.4 / 2023-02-20
+
+* Changed default API domain from *.mite.yo.lk to *.mite.de
+
 ### 0.5.3 / 2013-11-28
 
 * Fixed issue with error format returned from mite

@@ -1,6 +1,6 @@
 ## mite-rb
 
-The official ruby library for interacting with the [RESTful API](http://mite.yo.lk/en/api) of [mite](http://mite.yo.lk/en), a sleek time tracking webapp.
+The official ruby library for interacting with the [RESTful API](http://mite.de/en/api) of [mite](http://mite.de/en), a sleek time tracking webapp.
 
 ## Install
 
@@ -12,13 +12,13 @@ mite-rb requires activeresource and activesupport in version 3.1 or above. If yo
 
 ## Documentation
 
-You should read the complete *mite*.api documentation at [http://mite.yo.lk/en/api](http://mite.yo.lk/en/api)
+You should read the complete *mite*.api documentation at [http://mite.de/en/api](http://mite.de/en/api)
 
 ### Authenticate
 
 **IMPORTANT:** To use mite-rb you **must** enable the *mite*.api for your user within the webinterface of *mite*! It is disabled by default.
 
-The first thing you need to set is the account name.  This is the same as the web address (subdomain) for your account. For example if you use *mite* from the domain *demo.mite.yo.lk* set the account to 'demo':
+The first thing you need to set is the account name.  This is the same as the web address (subdomain) for your account. For example if you use *mite* from the domain *demo.mite.de* set the account to 'demo':
 
     Mite.account = 'demo'
 
